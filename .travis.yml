@@ -4,7 +4,7 @@ language: java
 sudo: required
 jdk: openjdk8
 before_install:
-    - restaurant-manager
+    - cd src
 after_success:
     - mvn jacoco:report coveralls:report
 cache:
