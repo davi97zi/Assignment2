@@ -3,6 +3,10 @@ group: edge
 language: java
 sudo: required
 jdk: openjdk8
+before_install:
+    - cd restaurant-manager
+after_success:
+    - mvn jacoco:report coveralls:report
 cache:
   directories:
     - $HOME/.m2
