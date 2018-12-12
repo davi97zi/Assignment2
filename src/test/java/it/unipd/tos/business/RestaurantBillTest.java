@@ -46,13 +46,22 @@ public MenuItem generateRandomMenuItem() {
     List<MenuItem> l = new ArrayList<MenuItem>();
     l.add(new MenuItem(itemType.Pizze, "Margherita", 5.2));
     l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
+    l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
+    l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
+    l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
+    l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
+    l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
+    l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
+    l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
+    l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
+    l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
+    l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
     l.add(new MenuItem(itemType.Primi, "Bucatini", 7.0));
     l.add(new MenuItem(itemType.Primi, "Carbonara", 8.8));
-
     Bill b = new Bill();
     double p = b.getOrderPrice(l);
+    assertEquals(Integer.toString(((int) Math.round(p))), "128");
     
-    assertEquals(Double.toString(p), "31.2");
 
 }
 
