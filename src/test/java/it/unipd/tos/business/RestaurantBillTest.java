@@ -17,35 +17,14 @@ import java.util.List;
 import java.util.Random;
 
 public class RestaurantBillTest {
-
-public MenuItem generateRandomMenuItem() {
-  String[] pizze  = {"Margherita", "Capricciosa"};
-  String[] primi = {"Bucatini", "Carbonara"};
-
-  Random r = new Random();
-
-  String nome;
-  itemType iT;
-  if(r.nextBoolean()) {
-    iT = itemType.Pizze;
-    nome = pizze[r.nextInt(2)];
-  }
-  else {
-    iT = itemType.Primi;
-    nome = primi[r.nextInt(2)];
-  }
-
-  double prezzo = 6 + 4*r.nextDouble();
-
-  return new MenuItem(iT, nome, prezzo);
-}
-  @Test
+  
+  @org.junit.Test(expected = RestaurantBillException.class)
   public void testGetOrderPrice_ListSizeBiggerThan20_RestaurantBillException() throws RestaurantBillException {
      Bill b = new Bill();
-        b.getOrderPrice(new ArrayList<MenuItem>(21));
+     b.getOrderPrice(new ArrayList<MenuItem>(21));
   }
   
-  @Test
+  @org.junit.Test(expected = RestaurantBillException.class)
   public void testGetOrderPrice() throws RestaurantBillException {
     //fail("Not yet implemented");
     List<MenuItem> l = new ArrayList<MenuItem>();
