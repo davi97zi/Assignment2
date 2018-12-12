@@ -10,6 +10,7 @@ import it.unipd.tos.business.exception.RestaurantBillException;
 import it.unipd.tos.model.MenuItem;
 import it.unipd.tos.model.MenuItem.itemType;
 
+import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
