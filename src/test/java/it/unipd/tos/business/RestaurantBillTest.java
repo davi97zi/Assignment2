@@ -40,7 +40,7 @@ public MenuItem generateRandomMenuItem() {
   return new MenuItem(iT, nome, prezzo);
 }
   @org.junit.Test(expected = RestaurantBillException.class)
-  public void testGetOrderPrice_ListSizeBiggerThan20_RestaurantBillException() {
+  public void testGetOrderPrice_ListSizeBiggerThan20_RestaurantBillException() throws RestaurantBillException {
      Bill b = new Bill();
         b.getOrderPrice(new ArrayList<MenuItem>(21));
   }
