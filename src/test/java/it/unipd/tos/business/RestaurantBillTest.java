@@ -6,8 +6,6 @@ package it.unipd.tos.business;
 
 import static org.junit.Assert.*;
 
-import org.junit.Test;
-
 import it.unipd.tos.business.exception.RestaurantBillException;
 import it.unipd.tos.model.MenuItem;
 import it.unipd.tos.model.MenuItem.itemType;
@@ -24,7 +22,7 @@ public class RestaurantBillTest {
      b.getOrderPrice(new ArrayList<MenuItem>(21));
   }
   
-  @org.junit.Test(expected = RestaurantBillException.class)
+  @org.junit.Test
   public void testGetOrderPrice() throws RestaurantBillException {
     //fail("Not yet implemented");
     List<MenuItem> l = new ArrayList<MenuItem>();
