@@ -18,8 +18,12 @@ public class RestaurantBillTest {
   
   @org.junit.Test
   public void testGetOrderPrice_ListSizeBiggerThan20_RestaurantBillException() throws RestaurantBillException {
+     List<MenuItem> list = new ArrayList<>();
+     for(int i = 0; i < 21; i++) {
+       list.add(new MenuItem(MenuItem.itemType.PIZZA, "Margherita", 4.50));
+     }
      Bill b = new Bill();
-     b.getOrderPrice(new ArrayList<MenuItem>(21));
+     b.getOrderPrice(list);
   }
   
   @org.junit.Test
