@@ -60,7 +60,7 @@ public MenuItem generateRandomMenuItem() {
     l.add(new MenuItem(itemType.Primi, "Carbonara", 8.8));
     Bill b = new Bill();
     double p = b.getOrderPrice(l);
-    assertEquals(Integer.toString(((int) Math.round(p))), "128");
+    assertEquals(Integer.toString(((int) Math.round(p))), Integer.toString(((int) Math.round(121.6))));
     
 
 }
