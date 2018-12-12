@@ -31,7 +31,7 @@ public class RestaurantBillTest {
       }
   }  
 
-  @org.junit.Test
+  @Test
   public void testGetOrderPrice() throws RestaurantBillException {
     //fail("Not yet implemented");
     List<MenuItem> l = new ArrayList<MenuItem>();
@@ -49,12 +49,7 @@ public class RestaurantBillTest {
     l.add(new MenuItem(itemType.Pizze, "Capricciosa", 10.2));
     l.add(new MenuItem(itemType.Primi, "Bucatini", 7.0));
     l.add(new MenuItem(itemType.Primi, "Carbonara", 8.8));
-    
-    if(l.size() > 20) {
-      throw new RestaurantBillException("Numero di ordinazioni" + 
-                     " maggiori di 20");
-    }
-    
+
     Bill b = new Bill();
     double p = b.getOrderPrice(l);
     assertEquals(Integer.toString(((int) Math.round(p))), Integer.toString(((int) Math.round(121.6))));
