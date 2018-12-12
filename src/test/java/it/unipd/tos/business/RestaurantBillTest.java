@@ -16,16 +16,20 @@ import java.util.Random;
 
 public class RestaurantBillTest {
   
-  @org.junit.Test(expected = RestaurantBillException.class)
-  public void testGetOrderPrice_ListSizeBiggerThan20_RestaurantBillException() throws RestaurantBillException {
-     List<MenuItem> list = new ArrayList<>();
-     for(int i = 0; i < 21; i++) {
-       list.add(new MenuItem(MenuItem.itemType.PIZZA, "Margherita", 4.50));
-     }
-     Bill b = new Bill();
-     b.getOrderPrice(list);
-  }
-  
+  @Test
+  public void testGetOrderPrice_ListSizeBiggerThan20_RestaurantBillException() {
+      Bill b = new Bill();
+      List<MenuItem> l = new ArrayList<MenuItem>(21);
+      for(int i=0;i<21;i++) {
+        l.add(new MenuItem(itemType.Pizze, "Margherita", 6.50));  
+      }
+      try {
+        b.getOrderPrice(l);
+      } catch (RestaurantBillException e) {
+        assertEquals(e.getMessage(), "Errore: ordinazione troppo grande");
+      }
+  }  
+
   @org.junit.Test
   public void testGetOrderPrice() throws RestaurantBillException {
     //fail("Not yet implemented");
