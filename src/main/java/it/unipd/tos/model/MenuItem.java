@@ -19,10 +19,6 @@ public class MenuItem {
     return itemT;
   }
   
-  public String getNome() {
-    return nome;
-  }
-  
   public double getPrezzo() {
     return prezzo;
   }
