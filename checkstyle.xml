@@ -6,7 +6,7 @@
     <module name="FileTabCharacter"/>
     
     <module name="Header">
-        <property name="header" value="// [Davide] [Zilio] [1149807]" />
+        <property name="header" value="////////////////////////////////////////////////////////////////////\n// [DAVIDE] [ZILIO] [1149807]\n////////////////////////////////////////////////////////////////////"/>
         <property name="ignoreLines" value="1, 3"/>
     </module>
     
