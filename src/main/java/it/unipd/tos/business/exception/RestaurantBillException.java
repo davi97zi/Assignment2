@@ -9,4 +9,7 @@ public class RestaurantBillException extends Throwable {
     public RestaurantBillException(double d){
       super("Prezzo riportato: "+d);
     }
+    public RestaurantBillException(String m){
+      super(m);
+    }
 }
