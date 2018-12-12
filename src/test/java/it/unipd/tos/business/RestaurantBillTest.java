@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class RestaurantBillTest {
   
-  @org.junit.Test
+  @org.junit.Test(expected = RestaurantBillException.class)
   public void testGetOrderPrice_ListSizeBiggerThan20_RestaurantBillException() throws RestaurantBillException {
      List<MenuItem> list = new ArrayList<>();
      for(int i = 0; i < 21; i++) {
