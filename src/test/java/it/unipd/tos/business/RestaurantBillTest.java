@@ -42,13 +42,9 @@ public MenuItem generateRandomMenuItem() {
   @org.junit.Test(expected = RestaurantBillException.class)
   public void testGetOrderPrice_ListSizeBiggerThan20_RestaurantBillException() {
      Bill b = new Bill();
-     try {
         b.getOrderPrice(new ArrayList<MenuItem>(21));
-     } catch (RestaurantBillException e) {
-        assertEquals(e.getMessage(), "Non si possono ordinare piu' di 20 pietanze");
-     }
-
   }
+  
   @Test
   public void testGetOrderPrice() throws RestaurantBillException {
     //fail("Not yet implemented");
