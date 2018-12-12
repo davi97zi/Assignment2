@@ -6,8 +6,8 @@ package it.unipd.tos.business.exception;
 
 public class RestaurantBillException extends Exception {
     
-    public RestaurantBillException(String m){
-        super(m);
+    public RestaurantBillException(String message){
+        super(message);
     }
     
     public String getMessage(){
