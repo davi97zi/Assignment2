@@ -23,6 +23,10 @@ public class Bill implements RestaurantBill {
       price-=minPriceItem(l, itemType.Pizze);
     }
     
+    if(price >= 100) {
+      price -= price*0.05;
+    }
+    
     return price;
   }
   
