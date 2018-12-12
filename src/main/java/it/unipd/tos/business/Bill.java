@@ -12,7 +12,8 @@ import it.unipd.tos.model.MenuItem.itemType;
 public class Bill implements RestaurantBill {
   public double getOrderPrice(List<MenuItem> l) throws RestaurantBillException { 
     if(l.size() > 20) {
-      throw new RestaurantBillException("Numero di ordinazioni" +  " > di 20");
+      throw new RestaurantBillException("Numero di ordinazioni" + 
+                                        " > di 20");
     }
     double price=0;
     for(MenuItem i : l) { //calcolo somma
