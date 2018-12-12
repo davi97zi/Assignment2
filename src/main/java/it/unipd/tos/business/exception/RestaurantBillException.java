@@ -5,7 +5,7 @@
 package it.unipd.tos.business.exception;
 
 @SuppressWarnings("serial")
-public class RestaurantBillException extends Throwable {
+public class RestaurantBillException extends Exception {
     public RestaurantBillException(double d){
       super("Prezzo riportato: "+d);
     }
